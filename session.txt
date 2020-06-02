@@ -1,0 +1,48 @@
+//https://blog.logrocket.com/a-complete-guide-to-threads-in-node-js-4fa3898fe74f/#:~:text=Specifically%2C%20thread%20workers%20are%20more,and%20forth%20much%20more%20efficiently.
+2. workers threads
+    - The worker_threads module enables the use of threads that execute JavaScript in parallel
+    - Workers (threads) are useful for performing CPU-intensive JavaScript operations
+    - They will not help much with I/O-intensive work. Node.js’s built-in asynchronous I/O operations are more efficient than Workers can be.
+    - Unlike child_process or cluster, worker_threads can share memory
+
+3. How do worker threads work? (https://blog.insiderattack.net/deep-dive-into-worker-threads-in-node-js-e75e10546b11)
+    - JavaScript language does not have multi-threading features
+    - Therefore, Node.js Worker Threads behave in a different way than traditional multi-threading
+    - In Node.js, a worker’s responsibility is to execute a piece of code (worker script) provided by the parent worker
+    - The worker script will then run in isolation from other workers, with the ability to pass messages between it and the parent worker
+    - In Node.js, each worker will have its own instance of V8 and Event Loop
+   
+4. Advanatages of workers over child process
+    - Thread workers are more lightweight and share the same process ID as their parent threads
+    - They can also share memory with their parent threads
+
+5. Websocket
+    - WebSocket protocol opens a much faster and more efficient line of communication between client and server 
+    - It provides by-directional communication using tcp connection
+    - Establishes a persistent connection between client and server
+    - low latency communication and imporves the perfomance
+    
+
+6. Socket.io
+    - Socket.IO is a library which enables real-time and full duplex communication between the Client and the Web servers
+    - It uses the WebSocket protocol to provide the interface
+    - It works on all platform, server or device ensuring the equality, reliability, and speed.
+
+
+7. Unit testing
+    - UNIT TESTING is a level of software testing where individual units/ components of a software are tested
+    - The purpose is to validate that each unit of the software performs as designed
+    - A unit is the smallest testable part of any software
+    - In procedural programming, a unit may be an individual program, function, procedure, etc
+    - In object-oriented programming, the smallest unit is a method, which may belong to a base/ super class, abstract class or derived/ child class. 
+
+8. Mocha
+    - Mocha is a feature-rich JavaScript test framework runs on Node.js and in the browser
+    - Its widely used with Node.js
+    - It provides functionality for testing both synchronous and asynchronous code with a very simple and similar interface.
+    - Mocha provides a variety of interfaces for defining test suites and individual tests
+
+9. Chai
+    - Chai is a assertion library for node and the browser 
+    - Can be delightfully paired with any javascript testing framework
+    - Can use chai to write tests like English sentences
